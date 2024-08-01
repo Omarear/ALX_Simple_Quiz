@@ -3,7 +3,7 @@ function checkAnswer() {
     const userAnswer = document.querySelector('input[name="quiz"]:checked');
 
     if (userAnswer) {
-        // Directly compare userAnswer value with correctAnswer
+        // Compare userAnswer with correctAnswer
         if (userAnswer.value === correctAnswer) {
             document.getElementById('feedback').textContent = "Correct! Well done.";
         } else {
@@ -14,4 +14,5 @@ function checkAnswer() {
     }
 }
 
+// Add event listener to the submit button
 document.getElementById('submit-answer').addEventListener('click', checkAnswer);
